@@ -35,6 +35,7 @@ nav ul li a{
     font-size: 18px;
     border-radius: 4px;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 li a.active, li a:hover{
@@ -93,6 +94,21 @@ li a.active, li a:hover{
     margin: 2%;
     padding: 2%;
 }
+
+body{
+    background-image: linear-gradient(180deg, #eee, #fff 100px, #fff);
+}
+  
+.container{
+    max-width: 960px;
+}
+  
+.pricing-header{
+    max-width: 700px;
+}
+
+
+
 
 @media (max-width: 952px){
     .enlace{
