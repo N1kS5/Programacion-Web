@@ -1,160 +1,570 @@
-*{
-    padding: 0;
+h1{font-size: 3,5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 1.25em;}
+ul{list-style: none;}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Roboto",sans-serif;
     margin: 0;
-    text-decoration: none;
-    list-style: none;
+}
+
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    outline: 0;
     box-sizing: border-box;
 }
 
-nav{
-    background: white;
-    height: 90px;
+
+.menu{
+    position: fixed;
+    background: #fff;
+    height: 75px;
     width: 100%;
-}
-.enlace{
-    position: absolute;
-    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
+    z-index: 1000;
 }
 
 .logo{
-    height: 60px;
+    color: black;
+    font-size: 35px;
+    padding: 0 80px;
+    font-weight: bold;
 }
 
-nav ul{
-    float: right;
-    margin-top: 8px;
-    margin-right: 20px;
+.menu-items{
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
 }
-nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0px 15px;
+
+.menu-items li{
+    border-radius: 3px;
+    margin: 0 5px;
+
 }
-nav ul li a{
-    color: black;
-    font-size: 18px;
-    border-radius: 4px;
-    text-transform: uppercase;
+
+.menu-items li a{
+    padding: 7px 13px;
     text-decoration: none;
+    font-size: 15px;
+    display: block;
+    text-transform: uppercase;
+    color: #000;
 }
 
-li a.active, li a:hover{
-    color: orangered;
-    transition: .5s;
+.menu-items li:hover, li.active{
+    background-color: orangered;
+    transition: .4s;
 }
-.check2{
-    font-size: 30px;
-    color: black;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
+
+.btn-menu{
+    margin-right: 30px;
+    font-size: 25px;
+    color: #000;
     cursor: pointer;
     display: none;
 }
-#check{
-    display: none;
+
+ul.show{
+    top: 65px;
 }
-.foto{
-    background: url(Imagenes/mesa.png) no-repeat;
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    background:linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5) 
+      ),
+      url("/mesa.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+}
+
+#hero h1{
+    color: white;
+    font-size: 3em;
+    margin: 0px;
+}
+#hero h2{
+    font-size: 2em;
+    margin: 10px;
+}
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+.timeline{
+    font: normal 16px/1.5 "Titillium web", sans-serif;
+    background: linear-gradient(54deg, #9164ff, #8bfff4);
+    color: #3c3f64;
+    overflow-x: hidden;
+    padding-bottom: 50px;
+}
+
+.timeline ul li{
+    list-style-type: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background: #fff;
+}
+
+.timeline ul li::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    background: #eee;
+}
+
+.timeline ul li div{
+    position: relative;
+    bottom: 0;
+    width: 400px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0,2);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.timeline ul li div time{
+    position: absolute;
+    background: orangered;
+    width: 80px;
+    height: 30px;
+    top: -15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+}
+
+.timeline ul li div div{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline ul li div div p{
+    text-align: center;
+}
+
+.timeline ul li div .discovery{
+    margin-right: 10px;
+}
+
+.timeline ul li:nth-of-type(odd) > div{
+    left: 45px;
+}
+
+.timeline ul li:nth-of-type(even) > div{
+    left: -439px;
+}
+
+.timeline ul li div{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.timeline ul li:nth-of-type(odd) div{
+    transform: translate3d(100px, -10px, 0) rotate(10deg);
+}
+
+.timeline ul li:nth-of-type(even) div{
+    transform: translate3d(100px, -10px, 0) rotate(10deg);
+}
+
+.timeline ul li.in-view div{
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+#planes{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    background-color: grey;
+    min-height: 100vh;
+    align-items: center;
+    padding: 40px 0 60px 0;
+    background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url(/mesa.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: calc(100vh - 80px);  
+    background-attachment: fixed;
 }
 
-.como{
-    margin-top: 50px;
-}
-.content{
-    width: 80%;
-    margin:0 auto;
-}
-.col2{
-    width: 48%;
-    float: left;
-    margin: 1%;
-    padding: 1%;
-}
-.col4{
-    width: 23%;
-    float: left;
-    margin: 1%;
-    padding: 1%;
+#planes h1 {
+    text-align: center;
+    font-size: 80px;
+    margin: 20px;
+    color:#FFF;
+    
 }
 
-#title {
-    margin: 0 auto;
-    font-size: 50px;
+#planes ul{
+    margin: 0;
+    padding: 0;
+}
+
+.precios-tabla{
     display: flex;
-    justify-content: center ;    
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: min(1600px, 100%);
+    margin: auto;
+    padding-top: 25px;
+    padding-bottom: 40px;
 }
 
-.pasos{
-    width: 20%;
-    float: right;
-    margin: 2%;
-    padding: 2%;
+.precios-carta{
+    flex: 1;
+    max-width: 360px;
+    background-color: #fff;
+    margin: 20px 5px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    color: #2d2d2d;
+    transition: 3.s linear;
+    border-radius: 30px;
+}
+sup{line-height: 20px;}
+
+.precios-carta-header{
+    background-color: orangered;
+    display: inline-block;
+    color: #fff;
+    margin: 0;
+    padding: 12px 20px;
+    border-radius: 0 0 20px 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: .4s linear;
 }
 
-body {
-    background-image: linear-gradient(180deg, #eee, #fff 100px, #fff);
-}
-  
-.container {
-   max-width: 960px;
-}
-  
-.pricing-header {
-    max-width: 700px;
+.precios-carta:hover .precios-carta-header{
+    box-shadow: 0 0 0 26em orangered;
+   
 }
 
 
+.price{
+    font-size: 70px;
+    color: orangered;
+    margin: 40px 0;
+    transition: .5s linear;
+}
+
+.price sup, .price span{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.precios-carta:hover,.precios-carta:hover .price{
+    color: #fff;
+}
+
+.precios-carta li{
+    font-size: 15px;
+    padding: 10px 0;
+}
+
+.order-btn{
+    display: inline-block;
+    margin-bottom: 40px;
+    margin-top: 110px;
+    border: 3px solid orangered;
+    color: orangered;
+    padding: 18px 40px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: .3s linear;
+    text-decoration: none;
+}
+
+.order-btn:hover{
+    background-color: orangered;
+    color: #fff;
+}
 
 
-@media (max-width: 952px){
-    .enlace{
-        padding-left: 20px;
+#contacto{
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    color: #fff;
+    background: rgb(0, 0,0);
+    text-align: end;
+}
+.contei{
+    width: 80%;
+    padding: 4% 10%;
+    margin: 0 auto;
+}
+
+.contact {
+    margin: 4vh 0px;
+    padding: 2vh 0px;
+}
+
+.contact h1{
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.contact form{
+    width: 100%;
+}
+
+.contact input{
+    width: 46%;
+    margin: 20px 1%;
+    background: transparent;
+    border: 0px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 8px 10px;
+    font-size: 18px;
+    transition: 0.4s ease-in-out;
+    color: #fff;
+}
+
+.contact form textarea{
+    width: 96%;
+    margin: 20px 1%;
+    padding: 8px 10px;
+    border: 0px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 8px 10px;
+    font-size: 18px;
+    background: transparent;
+    resize: 0.4s ease-in-out;
+    color: #fff;
+}
+
+.contact form input:focus{
+    outline: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
+.contact form textarea:focus{
+    outline: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
+.contact form textarea:focus{
+    outline: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
+.icons{
+    margin: 6vh 0px;
+}
+
+.btn{
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    font-size: 18px;
+    font-weight: bold;
+    background: transparent;
+    transition: 0.4s ease-in-out;
+    margin: 30px 10px;
+}
+
+.btn:hover{
+    background: #fff;
+    cursor: pointer;
+    color: #000;
+}
+
+.btn-social{
+    font-size: 18px;
+    color: #fff;
+    margin: 40px 20px;
+    padding: 15px 18px;
+    border-radius: 50%;
+    background: #000;
+    transition: 0.4s ease-in-out;
+}
+
+.btn-social:hover{
+    color: #000;
+    background-color: #fff;
+}
+
+#footer{
+    text-align: center;
+}
+
+
+@media screen and (max-width: 952px){
+    .logo{
+        font-size: 30px;
+        padding-left: 35px;
     }
-    nav ul li a{
+    .menu-items li a{
         font-size: 16px;
     }
 }
 
-@media (max-width: 858px){
-
-    .checkbtn{
-        display: block;
+@media screen and (max-width: 858px){
+    .menu{
+        height:  65px;
     }
-    ul{
+    .btn-menu{
+        display: inline;
+    }
+    .menu-items{
         position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #2c3e50;
-        top: 80px;
-        left: -100%;
+        width: 100vw;
+        height: calc(100% - 65px);
+        background: #414141;
+        top: -100vh;
         text-align: center;
-        transition: all .5s;
+        transition: all .4s;
+        flex-direction: column;
     }
-    nav ul li{
-        display: block;
-        margin: 50px 0;
+    .menu-items li{
+        margin: 10px 0 0 0;
         line-height: 30px;
     }
-    nav ul li a{
-        font-size: 20px;
-    }
-    li a:hover, li a.active{
+    .menu-items li:hover{
         background: none;
+    }
+    .menu-items li a{
+        font-size: 20px;
+        color: #000;
+        font-weight: bold;
+    }
+    .menu-items li a:hover{
         color: orangered;
     }
-    #check:checked ~ ul{
-        left:0;
+    .logo{
+        font-size: 25px;
+        padding-left: 15px;
     }
 }
-@media (max-width: 500px){
-    .check2{
-        display: block;
+
+@media screen and (max-width: 858px) and (orientation: landscape){
+    .menu-items li{
+        margin: 5px 0 0 0;
     }
-    #check{
-        display: none;
+    .menu-items{
+        overflow: scroll;
+        height: calc(100% - 65px);
+    }
+}
+
+
+
+@media (max-witdth:900px){
+    .contact form in input{
+        width: 92%;
+    }
+    .contact form textarea{
+        width: 92%;
+    }
+    .btn{
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+    .btn-social{
+        font-size: 14px;
+        margin: 10px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .precios-carta{
+        flex: 50%; 
+    }
+}
+
+@media screen and (max-width: 900px){
+    .timeline ul li div{
+        width: 25px;
+        flex-direction: column;
+    }
+    .timeline ul li div div{
+        width: 80%;
+        margin: 10px;
+    }
+    .timeline ul li:nth-of-type(even) > div{
+        left: -289px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    body{
+        background: #8bfff4;
+    }
+    .timeline ul li{
+        margin-left: 20px;
+
+    }
+    .timeline ul li div{
+        width: calc(100vw - 91px);
+    }
+    .timeline ul li:nth-of-type(even) > div{
+        left: 45px;
+    }
+}
+
+
+@media (min-width:720px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
     }
 }

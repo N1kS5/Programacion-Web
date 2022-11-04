@@ -1,0 +1,160 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+nav{
+    background: white;
+    height: 90px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+
+.logo{
+    height: 60px;
+}
+
+nav ul{
+    float: right;
+    margin-top: 8px;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0px 15px;
+}
+nav ul li a{
+    color: black;
+    font-size: 18px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+li a.active, li a:hover{
+    color: orangered;
+    transition: .5s;
+}
+.check2{
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+.foto{
+    background: url(Imagenes/mesa.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);  
+}
+
+.como{
+    margin-top: 50px;
+}
+.content{
+    width: 80%;
+    margin:0 auto;
+}
+.col2{
+    width: 48%;
+    float: left;
+    margin: 1%;
+    padding: 1%;
+}
+.col4{
+    width: 23%;
+    float: left;
+    margin: 1%;
+    padding: 1%;
+}
+
+#title {
+    margin: 0 auto;
+    font-size: 50px;
+    display: flex;
+    justify-content: center ;    
+}
+
+.pasos{
+    width: 20%;
+    float: right;
+    margin: 2%;
+    padding: 2%;
+}
+
+body {
+    background-image: linear-gradient(180deg, #eee, #fff 100px, #fff);
+}
+  
+.container {
+   max-width: 960px;
+}
+  
+.pricing-header {
+    max-width: 700px;
+}
+
+
+
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: orangered;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+@media (max-width: 500px){
+    .check2{
+        display: block;
+    }
+    #check{
+        display: none;
+    }
+}
