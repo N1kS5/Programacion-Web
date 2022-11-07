@@ -63,7 +63,7 @@ body{
 }
 
 .menu-items li:hover, li.active{
-    background-color: orangered;
+    background-color: #ff9800;
     transition: .4s;
 }
 
@@ -91,7 +91,7 @@ ul.show{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5) 
       ),
-      url("/mesa.jpg");
+      url("/Image/mesa.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
@@ -115,10 +115,17 @@ ul.show{
 
 .timeline{
     font: normal 16px/1.5 "Titillium web", sans-serif;
-    background: linear-gradient(54deg, #9164ff, #8bfff4);
+    background: #414141;
     color: #3c3f64;
     overflow-x: hidden;
     padding-bottom: 50px;
+}
+
+#comoh1{
+    text-align: center;
+    font-size: 80px;
+    margin: 20px;
+    color:#fff;
 }
 
 .timeline ul li{
@@ -127,7 +134,7 @@ ul.show{
     width: 6px;
     margin: 0 auto;
     padding-top: 50px;
-    background: #fff;
+    background: #022436;
 }
 
 .timeline ul li::after{
@@ -139,7 +146,7 @@ ul.show{
     width: 20px;
     height: 20px;
     z-index: 2;
-    background: #eee;
+    background: #022436;
 }
 
 .timeline ul li div{
@@ -155,8 +162,9 @@ ul.show{
 }
 
 .timeline ul li div time{
+    color: #000;
     position: absolute;
-    background: orangered;
+    background: #ff9800;
     width: 80px;
     height: 30px;
     top: -15px;
@@ -221,7 +229,7 @@ ul.show{
     min-height: 100vh;
     align-items: center;
     padding: 40px 0 60px 0;
-    background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url(/mesa.jpg);
+    background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url(/Image/segunda.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -266,7 +274,7 @@ ul.show{
 sup{line-height: 20px;}
 
 .precios-carta-header{
-    background-color: orangered;
+    background-color: #ff9800;
     display: inline-block;
     color: #fff;
     margin: 0;
@@ -281,14 +289,14 @@ sup{line-height: 20px;}
 }
 
 .precios-carta:hover .precios-carta-header{
-    box-shadow: 0 0 0 26em orangered;
+    box-shadow: 0 0 0 26em #ff9800;
    
 }
 
 
 .price{
     font-size: 70px;
-    color: orangered;
+    color: #ff9800;
     margin: 40px 0;
     transition: .5s linear;
 }
@@ -311,8 +319,8 @@ sup{line-height: 20px;}
     display: inline-block;
     margin-bottom: 40px;
     margin-top: 110px;
-    border: 3px solid orangered;
-    color: orangered;
+    border: 3px solid #ff9800;
+    color: #ff9800;
     padding: 18px 40px;
     border-radius: 8px;
     text-transform: uppercase;
@@ -322,7 +330,7 @@ sup{line-height: 20px;}
 }
 
 .order-btn:hover{
-    background-color: orangered;
+    background-color: #ff9800;
     color: #fff;
 }
 
@@ -332,7 +340,7 @@ sup{line-height: 20px;}
     margin: 0;
     font-weight: bold;
     color: #fff;
-    background: rgb(0, 0,0);
+    background: #022436;
     text-align: end;
 }
 .contei{
@@ -437,6 +445,10 @@ sup{line-height: 20px;}
     text-align: center;
 }
 
+#mensaje{
+    font-family: "Roboto",sans-serif;
+}
+
 
 @media screen and (max-width: 952px){
     .logo{
@@ -478,7 +490,7 @@ sup{line-height: 20px;}
         font-weight: bold;
     }
     .menu-items li a:hover{
-        color: orangered;
+        color: #ff9800;
     }
     .logo{
         font-size: 25px;
