@@ -19,7 +19,23 @@ body{
     outline: 0;
     box-sizing: border-box;
 }
-
+.whatsapp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 40px;
+    z-index: 100;
+}
+i.fab.fa-whatsapp {
+    margin-top: 8px;
+    margin-left: 3px;
+}
 
 .menu{
     position: fixed;
@@ -91,7 +107,7 @@ ul.show{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5) 
       ),
-      url("/Image/mesa.jpg");
+      url("Imagenes/mesa.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
@@ -114,18 +130,36 @@ ul.show{
 } 
 
 .timeline{
-    font: normal 16px/1.5 "Titillium web", sans-serif;
-    background: #414141;
+    font: normal 16px/1.5 "Roboto", sans-serif;
+    background-color: #ff7700;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cc0000' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23aa0000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23d6002b' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b10022' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d9004b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b2003d' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23d3006c' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ac0057' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23c4008c' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%239e0071' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa00aa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23880088' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+    background-size: cover;
     color: #3c3f64;
     overflow-x: hidden;
     padding-bottom: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
+#como{
+	 background:linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 
+      ),
+      url();
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+	padding-top: 40px;
+}
+
 
 #comoh1{
     text-align: center;
     font-size: 80px;
     margin: 20px;
     color:#fff;
+	line-height: 80px;
 }
 
 .timeline ul li{
@@ -217,6 +251,7 @@ ul.show{
     transform: none;
     visibility: visible;
     opacity: 1;
+	text-align: center;
 }
 
 
@@ -229,7 +264,7 @@ ul.show{
     min-height: 100vh;
     align-items: center;
     padding: 40px 0 60px 0;
-    background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url(/Image/segunda.jpg);
+    background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url(Imagenes/segunda.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -269,7 +304,10 @@ ul.show{
     overflow: hidden;
     color: #2d2d2d;
     transition: 3.s linear;
+	-webkit-transition-duration: 0.3s;
     border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
 }
 sup{line-height: 20px;}
 
@@ -280,17 +318,15 @@ sup{line-height: 20px;}
     margin: 0;
     padding: 12px 20px;
     border-radius: 0 0 20px 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 600;
     transition: .4s linear;
+	
 }
 
 .precios-carta:hover .precios-carta-header{
     box-shadow: 0 0 0 26em #ff9800;
-   
 }
 
 
@@ -345,7 +381,7 @@ sup{line-height: 20px;}
 }
 .contei{
     width: 80%;
-    padding: 4% 10%;
+    padding: 2% 10%;
     margin: 0 auto;
 }
 
@@ -382,7 +418,6 @@ sup{line-height: 20px;}
     padding: 8px 10px;
     border: 0px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-    padding: 8px 10px;
     font-size: 18px;
     background: transparent;
     resize: 0.4s ease-in-out;
@@ -443,7 +478,10 @@ sup{line-height: 20px;}
 
 #footer{
     text-align: center;
+	height: 75px;
+	
 }
+.footexto{ margin-top: 3%;}
 
 #mensaje{
     font-family: "Roboto",sans-serif;
@@ -471,7 +509,7 @@ sup{line-height: 20px;}
         position: fixed;
         width: 100vw;
         height: calc(100% - 65px);
-        background: #414141;
+        background: #ff9800;
         top: -100vh;
         text-align: center;
         transition: all .4s;
@@ -510,8 +548,25 @@ sup{line-height: 20px;}
 
 
 
-@media (max-witdth:900px){
-    .contact form in input{
+
+
+
+
+@media screen and (max-width: 900px){
+  
+    .timeline ul li div{
+        width: 25px;
+        flex-direction: column;
+    }
+    .timeline ul li div div{
+        width: 80%;
+        margin: 10px;
+    }
+    .timeline ul li:nth-of-type(even) > div{
+        left: -289px;
+    }
+	
+	 .contact form in input{
         width: 92%;
     }
     .contact form textarea{
@@ -534,26 +589,9 @@ sup{line-height: 20px;}
     }
 }
 
-@media screen and (max-width: 900px){
-    .timeline h1{
-        line-height: 
-    }
-    .timeline ul li div{
-        width: 25px;
-        flex-direction: column;
-    }
-    .timeline ul li div div{
-        width: 80%;
-        margin: 10px;
-    }
-    .timeline ul li:nth-of-type(even) > div{
-        left: -289px;
-    }
-}
-
 @media screen and (max-width: 600px){
     body{
-        background: #8bfff4;
+        background: #fff;
     }
     .timeline ul li{
         margin-left: 20px;
@@ -565,10 +603,17 @@ sup{line-height: 20px;}
     .timeline ul li:nth-of-type(even) > div{
         left: 45px;
     }
+	.contei {
+    width: 100%;
+    padding: 4% 4%;
+}
 }
 
 
 @media (min-width:720px){
+	section {
+    width: 100%;
+}
     header{
         position: fixed;
         width: 100%;
@@ -582,4 +627,5 @@ sup{line-height: 20px;}
         padding-bottom: 0;
         padding-right: 20px;
     }
-}
+	
+	}

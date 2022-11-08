@@ -1,12 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MenuQR</title>
-    <a href="./Pagina final/pagina.html"> Pagina final </a>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MenuQR</title>
+  <link rel="stylesheet" href="stylefinal.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link rel="stylesheet" href="https://fontawesome.com/icons/bars?s=solid&f=classic">
+  <script src="main.js" defer></script>
 </head>
 <body>
+	<a href="https://wa.me/54911000000" class="whatsapp" target="_blank"> <i class="fab fa-whatsapp"></i></a>
+  <section id="navbar">
+    <nav class="menu">
+      <label class="logo">MenuQR</label>
+      <ul class="menu-items" id="otromodo">
+        <li class=""><a href="#hero" onclick="showmenu()">Inicio</a></li>
+        <li><a href="#como" onclick="showmenu()">¿Cómo funciona?</a></li>
+        <li><a href="#planes" onclick="showmenu()">Planes</a></li>
+        <li><a href="#contacto" onclick="showmenu()">Contacto</a></li>
+      </ul>
+      <span class="btn-menu" onclick="showmenu()">
+        <i class="fa fa-bars"></i>
+      </span>
+    </nav>
+  </section>
+  
+  <section id="hero">
+    <h1>TÚ MENÚ DIGITAL</h1>
+    <h2>Escaneá el QR y listo</h2>
+  </section>
+
+  <section id="como">
+    <div class="timeline">
+      <h1 id="comoh1">¿Cómo funciona?</h1>
+      <ul>
+        <li>
+          <div>
+            <time><b>Paso 1</b></time>
+            <div class="discovery">
+              <h1>Solicita tú menú digital</h1>
+              <p>Contactanos</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time><b>Paso 2</b></time>
+            <div class="discovery">
+              <p>Contactanos</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time><b>Paso 3</b></time>
+            <div class="discovery">
+              <h1>Solicita tú menú digital</h1>
+              <p>Contactanos</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time><b>Paso 4</b></time>
+            <div class="discovery">
+              <h1>Solicita tú menú digital</h1>
+              <p>Contactanos</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <script src="main.js"></script>
+  
+  <section id="planes">
+    <h1>Planes</h1>
+    
+    <div class="precios-tabla">
+      
+      <div class="precios-carta">
+        <h3 class="precios-carta-header">Mensual</h3>
+        <div class="price"><sup>$</sup><strong>4500</strong><span>/mes</span></div>
+        <ul>
+          <li><strong>Generación de código QR</strong></li>
+          <li><strong>Menú autogestionable</strong></li>
+          <li><strong>Adaptación a a dispositivos móviles</strong></li>
+          <li><strong>Link del menú</strong></li>
+          <li><strong>Adhesivos con código QR para mesas</strong></li>
+          
+        </ul>
+        <a href="#" class="order-btn">Pedinos el tuyo</a>
+      </div>
+    
+      <div class="precios-carta">
+        <h3 class="precios-carta-header">Anual</h3>
+        <div class="price"><sup>$</sup><strong>3500</strong><span>/mes</span></div>
+        <ul>
+          <li><strong>Generación de código QR</strong></li>
+          <li><strong>Menú autogestionable</strong></li>
+          <li><strong>Adaptación a a dispositivos móviles</strong></li>
+          <li><strong>Link del menú</strong></li>
+          <li><strong>Adhesivos con código QR para mesas</strong></li>
+        </ul>
+        <a href="#" class="order-btn">Pedinos el tuyo</a>
+      </div>
+    </div>
+  </section>
+  
+  <section id="contacto">
+    <div class="contei">
+      <div class="contact">
+        <h1>Contacto</h1>
+        <form>
+          <input type="text" placeholder="Nombre" required />
+          <input type="mail" placeholder="Correo electronico" required />
+          <textarea id="mensaje" placeholder="Mensaje" rows="5" required></textarea>
+          <br />
+          <br />
+          <button class="btn">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section id="footer">
+<div class="footexto">
+  Copyright © 2022 derechos reservados</div>
+  </section>
+
 </body>
-</html> 
+</html>
