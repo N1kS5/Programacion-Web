@@ -535,6 +535,9 @@ sup{line-height: 20px;}
 }
 
 @media screen and (max-width: 900px){
+    .timeline h1{
+        line-height: 
+    }
     .timeline ul li div{
         width: 25px;
         flex-direction: column;
