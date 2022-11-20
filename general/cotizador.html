@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>MenuQR > Cotizador de plan</title>
+        <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MenuQR</title>
+  <link rel="stylesheet" href="stylefinal.css">
+  <style>
+   
+  </style>
+  <script>
+function algoritmo()
+{
+    let tipo_de_plan, cantidad, total;
+    tipo_de_plan = parseFloat (document.formulario1.tipo_de_plan.value);
+    cantidad = parseFloat (document.formulario1.cantidad.value);
+    total=cantidad*tipo_de_plan;
+    if(cantidad >= 5)
+        total=total-(total*(15/100));
+    document.formulario1.total.value = total;
+}
+ 
+        </script>
+
+    </head>
+    <body class="cotizadorbody">
+        <div> <h1 class="cotih1">Cotizador</h1> </div>
+        <div class="formcotizador">
+        <form name="formulario1">
+        <div  class="divcotizador">
+        <label for="tipo_de_plan"><h3>Elija el tipo de plan:</h3></label>
+        </div>
+        <div class="divcotizador">
+            <select name="tipo_de_plan" required="required" step="0.000001"  class="selectcotizador">
+            <option>- Seleccionar -</option>
+            <option value="4500">- Mensual -</option>
+            <option value="3500">- Anual -</option></select>
+        </div>
+                           
+        <div class="divcotizador">
+            <label for="cantidad"><h3>Ingresa cantidad de planes:</h3></label>
+        </div>
+        <div class="divcotizador">
+            <input name="cantidad" required="required" step="0.000001" type="number" class="inputcotizador" />
+        </div>
+             
+        <div class="divcotizador" style="text-align: right;">
+            <input value="Procesar" class="btncotizador" type="button" onclick="algoritmo();" />
+        </div>
+        <div class="divcotizador" style="margin-bottom: 25px;">
+            <input type="reset" class="btncotizador" />
+        </div>
+                    
+        <div class="divcotizador">
+            <label for="total"><h3>Valor de total:</h3></label>
+        </div>
+        <div  class="divcotizador">
+            <input name="total" step="0.000001" type="number"  class="inputcotizador" />
+        </div>
+        
+        </form>
+        </div>
+        
+    </body>
+</html>

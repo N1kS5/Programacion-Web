@@ -103,14 +103,10 @@ ul.show{
     flex-direction: column;
     height: 90vh;
     color: white;
-    background:linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5) 
-      ),
-      url("Imagenes/mesa.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
+    background:linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url("/imagenes/mesa.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     padding-bottom: 0px;
 }
 
@@ -266,7 +262,7 @@ ul.show{
     min-height: 100vh;
     align-items: center;
     padding: 40px 0 60px 0;
-    background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url(Imagenes/segunda.jpg);
+    background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url("/imagenes/segunda.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -306,7 +302,6 @@ ul.show{
     overflow: hidden;
     color: #2d2d2d;
     transition: 3.s linear;
-	-webkit-transition-duration: 0.3s;
     border-radius: 30px;
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
@@ -491,6 +486,66 @@ sup{line-height: 20px;}
     font-family: "Roboto",sans-serif;
 }
 
+.cotizadorbody {
+    background: #e96443;
+    background: -webkit-linear-gradient(to right, #904e95, #e96443);
+    background: linear-gradient(to right, #904e95, #e96443);
+    
+}
+
+.formcotizador{
+    background-color: #fff;
+    width: 60%; margin: 0 auto;padding: 60px 20px;border-radius: 20px;
+    position: absolute;
+    margin-left: 20%;
+    display: inline-block;
+}
+.divcotizador{
+    width: 50%;float: left;height: 100px;
+}
+.formcotizador h3 {
+    font-size: 1.2em;
+    margin: 10px;
+}
+.btncotizador{
+display: inline-block;
+    margin: 20px 5px;
+    border: 3px solid #ff9800;
+    color: #ff9800;
+    padding: 18px 40px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: .3s linear;
+    text-decoration: none;
+    width: 50%;
+}
+.btncotizador:hover{
+    background-color: #ff9800;
+    color: #fff;
+}
+.inputcotizador{
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: #000;
+    border-radius: 7px;
+    width: 100%;
+}
+.selectcotizador{
+    padding: 0.75rem;
+    border: 2px solid #000;
+    border-radius: 7px;
+    width: 100%;
+}
+.cotih1{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 80px;
+    margin: 20px;
+    color:#fff;
+	line-height: 80px;
+}
 
 @media screen and (max-width: 952px){
     .logo{
@@ -538,8 +593,32 @@ sup{line-height: 20px;}
         font-size: 25px;
         padding-left: 15px;
     }
+    .divcotizador{
+        width: 100%;float: left;height: 60px;
+    }
+    .btncotizador{
+        display: inline-block;
+            margin: 20px 5px;
+            border: 3px solid #ff9800;
+            color: #ff9800;
+            padding: 18px 40px;
+            border-radius: 8px;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: .3s linear;
+            text-decoration: none;
+            width: 100%;
 }
-
+.formcotizador h3 {
+    font-size: 1em;
+    margin: 10px;
+}
+.cotih1{
+    
+    font-size: 60px;
+   
+}
+}
 @media screen and (max-width: 858px) and (orientation: landscape){
     .menu-items li{
         margin: 5px 0 0 0;
@@ -624,5 +703,5 @@ sup{line-height: 20px;}
         padding-bottom: 0;
         padding-right: 20px;
     }
-	
+
 	}
