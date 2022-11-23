@@ -103,7 +103,7 @@ ul.show{
     flex-direction: column;
     height: 90vh;
     color: white;
-    background:linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url("/imagenes/mesa.jpg");
+    background:linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url("/mesa.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -262,7 +262,7 @@ ul.show{
     min-height: 100vh;
     align-items: center;
     padding: 40px 0 60px 0;
-    background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url("/imagenes/segunda.jpg");
+    background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url("/segunda.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
